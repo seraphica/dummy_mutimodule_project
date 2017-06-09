@@ -7,13 +7,15 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class IntroductionServiceTest {
 
-    private static final String THIS_IS_AWESOME_STRING = "this is awesome app";
+    private static final String REAL_NAME = "this is awesome app";
+    private static final String FALSE_NAME = "this is awesome app under cover";
 
-    private IntroductionService introductionModule0Class;
+
+    private IntroductionService introductionService;
 
     @Before
     public void setUp() throws Exception {
-        introductionModule0Class = new IntroductionService();
+        introductionService = new IntroductionService();
     }
 
     @Test
@@ -21,11 +23,36 @@ public class IntroductionServiceTest {
         //given
 
         //when
-        String result = introductionModule0Class.getName();
+        String result = introductionService.getName();
 
         //then
-        assertThat(result).isNotEmpty().isEqualTo(THIS_IS_AWESOME_STRING);
+        assertThat(result).isNotEmpty().isEqualTo(REAL_NAME);
 
     }
 
+    @Test
+    public void shouldReturnRealNameIfWanted() throws Exception {
+        //given
+        boolean realName = true;
+
+        //when
+        String result = introductionService.getName(realName);
+
+        //then
+        assertThat(result).isNotNull().isEqualTo(REAL_NAME);
+
+    }
+
+    @Test
+    public void shouldReturnFalseNameIfRealNotWanted() throws Exception {
+        //given
+        boolean realName = false;
+
+        //when
+        String result = introductionService.getName(realName);
+
+        //then
+        assertThat(result).isNotNull().isEqualTo(FALSE_NAME);
+
+    }
 }
