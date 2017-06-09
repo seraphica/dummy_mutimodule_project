@@ -1,0 +1,5 @@
+.idea
+*.iml
+target
+domain/src/test/resources/META-INF/domain-test-custom.properties
+domain-remote-impl/src/test/resources/META-INF/domain-remote-test-custom.properties
