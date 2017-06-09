@@ -6,6 +6,9 @@ class LoopSummator {
         Integer sum = 0;
         for (int i = startRange; i <= stopRange; i++) {
             sum += i;
+            if (sum > 10) {
+                sum -= 3;
+            }
         }
         return sum;
     }

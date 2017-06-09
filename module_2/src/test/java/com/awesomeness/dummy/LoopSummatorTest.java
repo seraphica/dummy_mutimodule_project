@@ -24,7 +24,7 @@ public class LoopSummatorTest {
         Integer result = loopSummator.add(startRange, stopRange);
 
         //then
-        assertThat(result).isNotNull().isEqualTo(1272);
+        assertThat(result).isNotNull().isEqualTo(1134);
 
     }
 
