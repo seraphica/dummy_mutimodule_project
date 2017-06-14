@@ -14,8 +14,7 @@
         <module>module_0</module>
         <module>module_1</module>
         <module>module_2</module>
-        <module>module_3</module>
-        <module>module_4</module>
+        <module>two-levels-module</module>
     </modules>
 
     <dependencyManagement>

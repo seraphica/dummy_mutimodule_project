@@ -3,9 +3,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-
-    <artifactId>module_3</artifactId>
-    <name>Module 3</name>
+    <artifactId>two-levels-module</artifactId>
+    <name>two levels module</name>
+    <packaging>pom</packaging>
 
     <parent>
         <groupId>com.awesomeness.dummy</groupId>
@@ -14,21 +14,10 @@
     </parent>
 
 
-    <dependencies>
-
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.mockito</groupId>
-            <artifactId>mockito-core</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-        </dependency>
-    </dependencies>
+    <modules>
+        <module>module_3</module>
+        <module>module_4</module>
+    </modules>
 
 
     <build>
@@ -39,5 +28,5 @@
             </plugin>
         </plugins>
     </build>
-
 </project>
+  
